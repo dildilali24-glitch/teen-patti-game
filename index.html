@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🃏 তিন পাত্তি মাস্টার</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🃏 তিন পাত্তি মাস্টার</h1>
+            <div class="wallet">
+                <span class="label">আপনার ব্যালেন্স:</span>
+                <span id="balance" class="amount">₹ 1000</span>
+            </div>
+        </div>
+
+        <div class="game-section">
+            <div class="table-info">
+                <div class="pot">
+                    <span class="label">পট:</span>
+                    <span id="pot" class="amount">₹ 0</span>
+                </div>
+                <div class="round-info">
+                    <span class="label">রাউন্ড:</span>
+                    <span id="round">1</span>
+                </div>
+            </div>
+
+            <div class="game-board">
+                <div class="cards-section">
+                    <h3>আপনার তাস:</h3>
+                    <div class="player-cards" id="playerCards"></div>
+                </div>
+
+                <div class="players-section">
+                    <h3>খেলোয়াড়রা:</h3>
+                    <div class="players-list" id="playersList"></div>
+                </div>
+            </div>
+
+            <div class="betting-section">
+                <div class="bet-input">
+                    <label for="betAmount">বাজি রাখুন (₹):</label>
+                    <input type="number" id="betAmount" min="10" max="500" value="50">
+                </div>
+                <div class="action-buttons">
+                    <button id="startBtn" class="btn btn-primary">🎮 গেম শুরু করুন</button>
+                    <button id="callBtn" class="btn btn-success" disabled>✅ কল করুন</button>
+                    <button id="raiseBtn" class="btn btn-warning" disabled>📈 বাড়ান</button>
+                    <button id="foldBtn" class="btn btn-danger" disabled>❌ ফোল্ড করুন</button>
+                </div>
+            </div>
+
+            <div class="game-log" id="gameLog"></div>
+        </div>
+
+        <div id="resultModal" class="modal">
+            <div class="modal-content">
+                <h2 id="resultTitle"></h2>
+                <p id="resultMsg"></p>
+                <div id="winnerCards"></div>
+                <button onclick="closeResult()">পরবর্তী রাউন্ড</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
